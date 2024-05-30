@@ -19,19 +19,19 @@ jobs:
         run: >-
           javac -cp 
           "../testresources/junit-platform-console-standalone-1.6.0.jar" 
-          "../poe5121_part_1_and_2/Login.java" "../poe5121_part_1_and_2/POE5121_Part_1_And_2.java" "../poe5121_part_1_and_2/Tasks.java"
+          "./poe5121_part_1_and_2/Login.java" "./poe5121_part_1_and_2/POE5121_Part_1_And_2.java" "./poe5121_part_1_and_2/Tasks.java"
           "../test/poe5121_part_1_and_2/LoginTest.java" "../test/poe5121_part_1_and_2/TasksTest.java"
       - name: List contents of src directory after compile
-        working-directory: ./src/POE5121_Part_1&2
+        working-directory: ./src/poe5121_part_1_and_2
         run: ls
-      - name: create testresources/POE5121_Part_1&2 directory
-        run: mkdir -p ./testresources/POE5121_Part_1&2
+      - name: create testresources/poe5121_part_1_and_2 directory
+        run: mkdir -p ./testresources/poe5121_part_1_and_2
       - name: copy compiled classes to testresources directory
-        working-directory: ./src/POE5121_Part_1&2
-        run: cp -t  "../../test/POE5121_Part_1&2" Login.class POE5121_Part_1_And_2.class Tasks.class
+        working-directory: ./src/poe5121_part_1_and_2
+        run: cp -t  "../../test/poe5121_part_1_and_2" Login.class POE5121_Part_1_And_2.class Tasks.class
       - name: copy compiled Test classes to testresources directory
-        working-directory: ./test/POE5121_Part_1&2
-        run: cp -t  "../../testresources/packageName" LoginTest.class TasksTest.class
+        working-directory: ./test/poe5121_part_1_and_2
+        run: cp -t  "../../testresources/poe5121_part_1_and_2" LoginTest.class TasksTest.class
       - name: List contents test package
-        working-directory: ./test/POE5121_Part_1&2
+        working-directory: ./test/poe5121_part_1_and_2
         run: ls
